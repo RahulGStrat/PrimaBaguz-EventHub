@@ -1,0 +1,204 @@
+.pre-sys {
+    padding: 80px 0;
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 50px;
+        margin-bottom: 60px;
+    }
+
+    &__heading-left {
+        flex: 1;
+    }
+
+    &__heading-right {
+        max-width: 380px;
+    }
+
+    &__title {
+        font-size: 38px;
+        font-weight: $font-semi-bold;
+        line-height: 1.1;
+        color: #1d1d28;
+        text-transform: uppercase;
+
+        span {
+            color: #EB2027;
+        }
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #434656;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        align-items: stretch;
+    }
+
+    &__card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 40px 32px 30px;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__card--active {
+        border: 2px solid #EB2027;
+        .pre-sys__plan{
+            color: #EB2027;
+        }
+    }
+
+    &__badge {
+        position: absolute;
+        top: -14px;
+        right: 24px;
+        background: #EB2027;
+        color: #fff;
+        padding: 4px 16px;
+        border-radius: 30px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        font-weight: $font-semi-bold;
+        text-transform: uppercase;
+    }
+
+    &__plan {
+        font-size: 12px;
+        font-family: "JetBrains Mono", monospace;
+        color: #737688;
+        font-weight: $font-bold;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+    }
+
+    &__price {
+        font-size: 38px;
+        font-weight: $font-semi-bold;
+        color: $color-grey;
+        line-height: 1;
+        margin-bottom: 35px;
+    }
+
+    &__features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 40px;
+    }
+
+    &__feature {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 18px;
+        font-size: 14px;
+        color: #434656;
+        font-weight: $font-regular;
+    }
+
+    &__button {
+        margin-top: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: $font-semi-bold;
+        transition: .3s;
+    }
+
+    &__button--dark {
+        background: #191B21;
+        color: #fff;
+
+        &:hover {
+            background: #000;
+            color: #fff;
+        }
+    }
+
+    &__button--primary {
+        background: #EB2027;
+        color: #fff;
+        text-decoration: underline;
+
+        &:hover {
+            background: #d8141d;
+            color: #fff;
+        }
+    }
+
+    &__date {
+        margin-top: 18px;
+        text-align: center;
+        font-size: 13px;
+        font-weight: $font-bold;
+        color: #8a8a96;
+        text-transform: uppercase;
+    }
+}
+@include tablet{
+    .pre-sys{
+        padding: 40px 0;
+        &__heading {
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        &__title {
+            font-size: 42px;
+        }
+
+        &__heading-right {
+            max-width: 100%;
+        }
+
+        &__cards {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+@include mobile{
+    .pre-sys{
+        padding: 30px 0;
+
+        &__heading {
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+        &__cards{
+            grid-template-columns: 1fr;
+        }
+        &__card {
+            padding: 30px 24px;
+        }
+
+        &__price {
+            font-size: 44px;
+        }
+
+        &__button {
+            height: 52px;
+            font-size: 16px;
+        }
+    }
+}
