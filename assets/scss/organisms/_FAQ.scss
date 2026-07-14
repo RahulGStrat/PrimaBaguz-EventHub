@@ -1,0 +1,238 @@
+.pre-faq {
+  margin: 0 auto;
+  padding: 80px 0 40px 0;
+  position: relative;
+
+  &__head {
+    color: #191b21;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 40px;
+
+    span {
+      color: #eb2027;
+    }
+  }
+
+  &__icon1 {
+    position: absolute;
+    top: 0;
+    left: 18%;
+  }
+  &__icon2 {
+    position: absolute;
+    top: 5%;
+    left: 75%;
+  }
+  &__icon3 {
+    position: absolute;
+    bottom: -10%;
+    left: 15%;
+  }
+  &__icon4 {
+    position: absolute;
+    bottom: -20%;
+    left: 80%;
+  }
+
+  /* --- Accordion Core --- */
+  .accordion {
+    background: #fdfdff;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    margin: 0 auto;
+    width: 58%
+}
+
+  .accordion-item {
+    border-bottom: 1px solid #eceff1;
+  }
+
+  .accordion-item {
+    border-right: none;
+    border-top: none;
+    border-left: none;
+  }
+
+  /* --- Accordion Header (<summary>) --- */
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none; 
+    padding: 24px 30px;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    color: #111111;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+  }
+
+  /* Removes default arrow in Safari */
+  .accordion-header::-webkit-details-marker {
+    display: none;
+  }
+
+  .accordion-header:hover {
+    background-color: #f4f6f8;
+  }
+
+  /* --- Custom CSS Arrow Chevron --- */
+  .accordion-icon {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-icon::before,
+  .accordion-icon::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    width: 8px;
+    height: 2px;
+    background-color: #111111;
+    border-radius: 2px;
+  }
+
+  .accordion-icon::before {
+    left: 0;
+    transform: rotate(45deg);
+  }
+
+  .accordion-icon::after {
+    right: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* --- Active/Open States --- */
+  /* Rotate arrow smoothly when opened */
+  .accordion-item[open] .accordion-icon {
+    transform: rotate(180deg);
+  }
+
+  /* --- Accordion Content Area --- */
+  .accordion-content {
+    padding: 0 30px 24px 30px;
+    text-align: left;
+    color: #555555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  /* Smooth opening animation entry */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+
+/* 125% */
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .pre-faq {
+        &__icon1 {
+            left: 14%;
+        }
+        &__icon2 {
+            left: 78%;
+        }
+        &__icon3 {
+            left: 10%;
+        }
+        &__icon4 {
+            left: 84%;
+        }
+    }
+}
+
+@include tablet-pro {
+    .pre-faq {
+
+        &__head {
+            font-size: 36px;
+        }
+        &__icon1 {
+            left: 10%;
+        }
+        &__icon2 {
+            left: 80%;
+        }
+        &__icon3 {
+            left: 10%;
+        }
+        &__icon4 {
+            left: 84%;
+        }
+    }
+}
+@include tablet {
+    .pre-faq {
+        &__head {
+            font-size: 32px;
+        }
+        .accordion {
+            width: 75%;
+        }
+        &__icon1 {
+            left: 0%;
+        }
+        &__icon2 {
+            left: 84%;
+        }
+        &__icon3 {
+            left: 5%;
+        }
+        &__icon4 {
+            left: 80%;
+        }
+    }
+}
+
+@include mobile {
+    .pre-faq {
+        &__head {
+            font-size: 28px;
+        }
+        .accordion {
+            width: 90%;
+        }
+        &__icon1 {
+            left: -2%;
+            img {
+                width: 60%;
+            }
+        }
+        &__icon2 {
+            left: 80%;
+            img {
+                width: 80%;
+            }
+        }
+        &__icon3 {
+            left: 0%;
+            img {
+                width: 80%;
+            }
+        }
+        &__icon4 {
+            left: 75%;
+            img {
+                width: 80%;
+            }
+        }
+    }
+}
