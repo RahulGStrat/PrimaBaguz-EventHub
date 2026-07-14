@@ -1,0 +1,149 @@
+.pre-rwd {
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 20px;
+    background: #0b3cb8;
+    color: #fff;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    &__heading {
+        flex: 1;
+    }
+
+    &__title {
+        font-size: 50px;
+        font-weight: $font-semi-bold;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        max-width: 360px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: $font-regular;
+    }
+
+    &__cards {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__card {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 24px;
+        height: 190px;
+        border: 1px solid rgba(250, 248, 255, 0.2);
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__label {
+        margin-bottom: 10px;
+        font-size: 12px;
+        font-family: "JetBrains Mono", monospace;
+        font-weight: $font-bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    &__price {
+        font-size: 38px;
+        font-weight: $font-bold;
+        line-height: 1;
+    }
+
+    &__image {
+        flex-shrink: 0;
+        margin-top: -24px;
+        // transform: translate(-15px, -24px);
+
+        img {
+            display: block;
+            width: 90px;
+            height: auto;
+        }
+    }
+}
+
+@include tablet {
+    .pre-rwd {
+        padding: 30px;
+
+        &__header {
+            flex-direction: column;
+        }
+
+        &__description {
+            max-width: 100%;
+        }
+
+        &__cards {
+            flex-direction: column;
+        }
+
+        &__title {
+            font-size: 42px;
+        }
+
+        &__price {
+            font-size: 42px;
+        }
+
+        &__image img {
+            width: 90px;
+        }
+    }
+}
+
+@include mobile {
+    .pre-rwd {
+        padding: 20px;
+
+        &__header {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__cards {
+            flex-direction: column;
+        }
+
+        &__card {
+            padding: 20px;
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__price {
+            font-size: 30px;
+        }
+
+        &__image img {
+            width: 70px;
+        }
+    }
+}
