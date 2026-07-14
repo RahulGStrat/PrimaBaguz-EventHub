@@ -26,3 +26,10 @@ hamburger.addEventListener('click', () => {
 overlay.addEventListener('click', closeMenu);
 
 // ================================ NAVBAR END ================================
+
+
+  $(".pre-header__nav-link").click(function() {
+  $(".pre-header__nav-link").removeClass('active');
+  $(this).addClass('active');
+
+})
