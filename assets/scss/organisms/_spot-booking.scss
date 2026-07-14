@@ -1,0 +1,81 @@
+.pre-sms {
+    margin: 30px 0;
+
+    &__wrap {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 40px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .pre-btn {
+            text-transform: uppercase;
+        }
+    }
+
+    &__content {
+        text-align: center;
+
+        h3 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #FAF8FF;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h4 {
+            font-size: 32px;
+            font-weight: 400;
+            color: #FAF8FF;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@include tablet {
+    .pre-sms {
+        &__wrap {
+            padding: 20px;
+        }
+
+        &__content {
+
+            h3 {
+                font-size: 28px;
+            }
+
+            h4 {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .pre-sms {
+        &__wrap {
+            padding: 20px;
+
+            .pre-btn {
+                font-size: 14px;
+            }
+        }
+
+        &__content {
+
+            h3 {
+                font-size: 18px;
+            }
+
+            h4 {
+                font-size: 18px;
+            }
+        }
+    }
+}

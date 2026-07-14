@@ -251,17 +251,15 @@
 
   &__veg {
     position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 350px;
     height: auto;
     z-index: 2;
     pointer-events: none;
+    display: none;
   }
 
   // Responsive Styles
   @include mobile-tablet {
-    padding: 120px 0 100px;
+    padding: 120px 0 25%;
 
     &__heading {
       font-size: 32px;
@@ -272,8 +270,14 @@
     }
 
     &__veg {
+      display: block;
       width: 250px;
-      bottom: -10px;
+      bottom: 2.2%;
+      left: -4%;
+    }
+
+    &__cta {
+      margin-top: 40px;
     }
 
     &__button {
@@ -282,7 +286,7 @@
   }
 
   @include mobile {
-    padding: 100px 0 90px;
+    padding: 100px 0 55%;
 
     &__heading {
       font-size: 28px;
@@ -307,16 +311,14 @@
       font-size: 18px;
     }
 
-    &__cta {
-      margin-top: 40px;
-    }
-
     &__button {
-      width: 60%;
+      width: 80%;
     }
     
     &__veg {
       width: 150px;
+      bottom: 3.3%;
+      left: -5%;
     }
   }
 }
