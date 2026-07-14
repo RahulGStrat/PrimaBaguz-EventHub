@@ -1,0 +1,52 @@
+.pre-banner{
+
+    &__main{
+        height: 600px;
+        position: relative;
+    }
+    &__bg{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .pre-btn__wrap{
+        position: absolute;
+        bottom: 10%;
+        left: 28%;
+        display: flex;
+        gap: 15px;
+
+        .pre-btn{
+            text-decoration: none;
+            transition: all ease 0.5s;
+            padding: 15px 28px;
+            font-size: 13px;
+            text-transform: uppercase;
+            border-radius: 10px;
+            font-weight: $font-bold;
+            span{
+                &::after{
+                    display: none;
+                }
+            }
+            &:hover{
+                background-color: #BC1A1F;
+            }
+            &--inv{
+                background-color: transparent;
+                border: 2px solid $color-white;
+
+                &:hover{
+                    border-color: #BC1A1F;
+                    background-color: transparent;
+                    color: $color-red;
+                }
+            }
+        }
+    }
+}
