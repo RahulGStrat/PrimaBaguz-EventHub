@@ -8,6 +8,16 @@
 @import "./base/dev";
 
 // atoms
+@import 'atoms/buttons';
+
+// molecule
+// @import 'molecules/';
+
+// organisms
+@import 'organisms/reward';
+@import 'organisms/secure-spot';
+@import 'organisms/header';
+@import 'organisms/banner';
 @import "atoms/buttons";
 // molecule
 // @import 'molecules/';

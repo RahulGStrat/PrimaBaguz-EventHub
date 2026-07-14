@@ -4,7 +4,9 @@
     border-radius: 20px;
     background: #0b3cb8;
     color: #fff;
-
+    &__main{
+        padding: 60px 0 80px;
+    }
     &__header {
         display: flex;
         justify-content: space-between;
@@ -120,7 +122,9 @@
 @include mobile {
     .pre-rwd {
         padding: 20px;
-
+        &__main{
+            padding: 30px 0;
+        }
         &__header {
             flex-direction: column;
             gap: 20px;
