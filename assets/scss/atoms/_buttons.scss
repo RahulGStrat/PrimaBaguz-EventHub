@@ -2,16 +2,34 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 250px;
-    height: 72px;
-    padding: 0 32px;
-    background: #ff1d25;
+    padding: 14px 28px;
+    background: #eb2027;
     color: #fff;
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
     text-decoration: none;
-    border-radius: 18px;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
+    border-radius: 16px;
+
+    span {
+        position: relative;
+        display: inline-block;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -1px;
+            width: 0;
+            height: 1px;
+            background: #fff;
+            border-radius: 999px;
+            transform: translateX(-50%);
+            transition: width .35s cubic-bezier(.19, 1, .22, 1);
+        }
+    }
+
+    &:hover {
+        color: #fff;
+        span::after {
+            width: 100%;
+        }
+    }
 }
