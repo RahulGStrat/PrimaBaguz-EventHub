@@ -1,7 +1,8 @@
 .pre-faq {
   margin: 0 auto;
-  padding: 80px 0 40px 0;
+  padding: 80px 0 80px 0;
   position: relative;
+  margin-bottom: 100px;
 
   &__head {
     color: #191b21;
@@ -28,16 +29,14 @@
   }
   &__icon3 {
     position: absolute;
-    bottom: -10%;
+    bottom: 0;
     left: 15%;
   }
   &__icon4 {
     position: absolute;
-    bottom: -20%;
+    bottom: -8%;
     left: 80%;
   }
-
-  /* --- Accordion Core --- */
   .accordion {
     background: #fdfdff;
     border-radius: 4px;
@@ -56,8 +55,6 @@
     border-top: none;
     border-left: none;
   }
-
-  /* --- Accordion Header (<summary>) --- */
   .accordion-header {
     display: flex;
     justify-content: space-between;
@@ -73,7 +70,6 @@
     transition: background-color 0.2s ease;
   }
 
-  /* Removes default arrow in Safari */
   .accordion-header::-webkit-details-marker {
     display: none;
   }
@@ -81,8 +77,6 @@
   .accordion-header:hover {
     background-color: #f4f6f8;
   }
-
-  /* --- Custom CSS Arrow Chevron --- */
   .accordion-icon {
     position: relative;
     width: 12px;
@@ -110,14 +104,9 @@
     right: 0;
     transform: rotate(-45deg);
   }
-
-  /* --- Active/Open States --- */
-  /* Rotate arrow smoothly when opened */
   .accordion-item[open] .accordion-icon {
     transform: rotate(180deg);
   }
-
-  /* --- Accordion Content Area --- */
   .accordion-content {
     padding: 0 30px 24px 30px;
     text-align: left;
@@ -127,7 +116,6 @@
     animation: slideDown 0.3s ease-out;
   }
 
-  /* Smooth opening animation entry */
   @keyframes slideDown {
     from {
       opacity: 0;
@@ -139,9 +127,6 @@
     }
   }
 }
-
-
-/* 125% */
 @media (min-width: 1200px) and (max-width: 1300px) {
     .pre-faq {
         &__icon1 {
@@ -186,6 +171,7 @@
         }
         .accordion {
             width: 75%;
+
         }
         &__icon1 {
             left: 0%;
@@ -204,6 +190,7 @@
 
 @include mobile {
     .pre-faq {
+         margin-bottom: 30px;
         &__head {
             font-size: 28px;
         }
@@ -230,6 +217,7 @@
         }
         &__icon4 {
             left: 75%;
+            bottom: 0;
             img {
                 width: 80%;
             }
