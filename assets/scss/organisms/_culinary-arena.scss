@@ -32,7 +32,7 @@
     padding: 24px 30px;
     border-left: 4px solid #eb2027;
     margin-bottom: 30px;
-    
+
     p {
       color: #191b21;
       font-size: 16px;
@@ -47,7 +47,7 @@
       font-size: 16px;
       line-height: 1.6;
       margin-bottom: 20px;
-      
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -81,7 +81,7 @@
     box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 4px 30px rgba(0, 0, 0, 0.1);
     z-index: 2;
     color: #ffffff;
-    
+
     &::before {
       content: "";
       position: absolute;
@@ -89,8 +89,8 @@
       border-radius: inherit;
       padding: 1px;
       background: linear-gradient(
-        180deg, 
-        rgba(255, 255, 255, 0.4) 0%, 
+        180deg,
+        rgba(255, 255, 255, 0.4) 0%,
         rgba(255, 255, 255, 0.05) 100%
       );
       mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -99,14 +99,14 @@
       mask-composite: exclude;
       pointer-events: none;
     }
-    
+
     p {
       margin-bottom: 0;
       font-size: 14px;
       font-weight: 500;
       line-height: 1.4;
     }
-    
+
     strong {
       font-weight: 700;
     }
@@ -152,6 +152,8 @@
   }
 
   @include mobile {
+
+    padding-top: 30px;
     &__title {
       font-size: 36px;
     }

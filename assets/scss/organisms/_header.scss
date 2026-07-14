@@ -32,6 +32,13 @@
       position: relative;
       display: flex;
       align-items: center;
+      &-btn{
+        margin-top: auto;
+        .pre-btn{
+          margin: 0px 0px 45px !important;
+          width: 100%;
+        }
+      }
     }
     &-link {
       color: $color-white;
