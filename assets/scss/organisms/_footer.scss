@@ -64,9 +64,9 @@
         display: block;
     }
     &__links {
-        display: grid;
-         grid-template-columns: 1fr 2fr;
-        gap: 30px;
+        display: flex;
+        // grid-template-columns: 1fr 2fr;
+        // gap: 30px;
     }
 
     &__heading {
@@ -168,8 +168,8 @@
         &__main{
             padding-top: 30px;
         }
-        &__links{
-            grid-template-columns: 1fr;
-        }
+        // &__links{
+        //     grid-template-columns: 1fr;
+        // }
     }
 }
