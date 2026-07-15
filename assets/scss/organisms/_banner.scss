@@ -3,6 +3,26 @@
     &__main {
         height: 600px;
         position: relative;
+
+        //  90%
+        @media (min-width: 1650px) and (max-width: 1890px) {
+            height: 666px;
+        }
+
+        //  80%
+        @media (min-width: 1899px) and (max-width: 1990px) {
+            height: 700px;
+        }
+
+        //  75%
+        @media (min-width: 1999px) and (max-width: 2100px) {
+            height: 750px;
+        }
+
+        //  75% below
+        @media (min-width: 2199px) {
+            height: 900px;
+        }
     }
 
     &__bg {
@@ -19,7 +39,8 @@
     .pre-btn__wrap {
         position: absolute;
         bottom: 10%;
-        left: 28%;
+        left: 41.5%;
+        transform: translateX(-41.5%);
         display: flex;
         gap: 15px;
 
@@ -43,16 +64,8 @@
                 border: 2px solid $color-white;
 
                 &:hover {
-                    // border-color: #BC1A1F;
-                    // background-color: #FAF8FF;
-                    color: #fff;
+                    color: $color-white;
                 }
-
-                // span {
-                //     &::after {
-                //         display: none;
-                //     }
-                // }
 
                 span {
                     &::after {
