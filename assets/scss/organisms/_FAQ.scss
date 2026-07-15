@@ -6,9 +6,9 @@
 
   &__head {
     color: #191b21;
-    font-size: 40px;
+    font-size: 42px;
     text-align: center;
-    font-weight: 600;
+    font-weight: $font-semi-bold;
     font-family: "Poppins", sans-serif;
     margin-bottom: 40px;
 
@@ -61,8 +61,8 @@
     align-items: center;
     list-style: none;
     padding: 24px 30px;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: $font-semi-bold;
+    font-size: 16px;
     font-family: "Poppins", sans-serif;
     color: #111111;
     cursor: pointer;
