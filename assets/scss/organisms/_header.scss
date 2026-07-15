@@ -211,7 +211,7 @@
   .pre-header {
     justify-content: space-between;
     gap: 15px;
-    flex-direction: column;
+    // flex-direction: column;
 
     &__nav {
       gap: 12px;
@@ -223,7 +223,86 @@
     }
 
     &__main {
-      padding: 20px 0 10px 0;
+      padding: 20px 0 20px 0;
+    }
+    .pre-btn{
+      margin-left: 0px;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    &__nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 270px;
+      height: 100vh;
+      background: $color-white;
+      flex-direction: column;
+      transform: translateX(100%);
+      z-index: 10;
+      transition: transform 0.4s ease;
+      padding: 60px 20px 0px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #555 #222;
+      margin-left: 0px;
+
+      &.show {
+        transform: translateX(0);
+      }
+
+      &-item {
+        display: unset;
+
+        &-arrowdwn svg {
+          path {
+            stroke: #fff;
+          }
+        }
+
+        &.open>.pre-navbar__nav-submenu {
+          // max-height: 500px; /* enough to show all */
+          opacity: 1;
+          background: transparent;
+          padding-top: 10px;
+        }
+
+        &.open>.pre-navbar__nav-link {
+          color: #fff;
+        }
+      }
+
+      &-link {
+        color: $color-grey;
+        font-weight: $font-bold;
+
+        &:hover {
+          color: $color-red;
+        }
+      }
+
+      &-submenu {
+        position: static;
+        padding: 0px 0px 0px 10px;
+
+        &-item {
+          position: relative;
+
+          &::before {
+            width: 4px;
+            height: 4px;
+            background-color: $color-red;
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 6px;
+            border-radius: 50%;
+          }
+        }
+      }
     }
   }
 }

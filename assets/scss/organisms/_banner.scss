@@ -34,6 +34,12 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        &--tab{
+            display: none;
+        }
+        &--mob{
+            display: none;
+        }
     }
 
     .pre-btn__wrap {
@@ -72,6 +78,43 @@
                         height: 0.8px;
                     }
                 }
+            }
+        }
+    }
+}
+@include tablet{
+    .pre-banner {
+        &__main{
+            height: 375px;
+        }
+        &__bg {
+            &--desk{
+                display: none;
+            }
+            &--tab{
+                display: block;
+            }
+        }
+    }
+}
+@include mobile{
+    .pre-banner {
+        &__main{
+            height: 400px;
+        }
+        .pre-btn__wrap{
+            flex-direction: column;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            bottom: 5%;
+        }
+        &__bg {
+            &--desk{
+                display: none;
+            }
+            &--mob{
+                display: block;
             }
         }
     }

@@ -27,31 +27,44 @@ overlay.addEventListener('click', closeMenu);
 
 // ================================ NAVBAR END ================================
 
-$(document).ready(function () {
+$(function () {
 
-    // Active on click
-    $(".pre-header__nav-link").on("click", function () {
-        $(".pre-header__nav-link").removeClass("active");
-        $(this).addClass("active");
-    });
+    const links = $(".pre-header__nav-link");
+    const sections = $("section[id]");
 
-    // Active on scroll
-    $(window).on("scroll", function () {
+    function setActive() {
+        let scrollPos = $(window).scrollTop();
+        let winHeight = $(window).height();
+        let docHeight = $(document).height();
 
-        var scrollPos = $(document).scrollTop() + 120;
+        // If at the bottom, always activate the last menu
+        if (scrollPos + winHeight >= docHeight - 2) {
+            links.removeClass("active");
+            links.last().addClass("active");
+            return;
+        }
 
-        $("section").each(function () {
+        let current = "";
 
-            var top = $(this).offset().top;
-            var bottom = top + $(this).outerHeight();
-            var id = $(this).attr("id");
+        sections.each(function () {
+            let top = $(this).offset().top - 150;
 
-            if (scrollPos >= top && scrollPos < bottom) {
-                $(".pre-header__nav-link").removeClass("active");
-                $('.pre-header__nav-link[href="#' + id + '"]').addClass("active");
+            if (scrollPos >= top) {
+                current = this.id;
             }
         });
 
+        if (current) {
+            links.removeClass("active");
+            links.filter('[href="#' + current + '"]').addClass("active");
+        }
+    }
+
+    $(window).on("scroll resize load", setActive);
+
+    links.on("click", function () {
+        links.removeClass("active");
+        $(this).addClass("active");
     });
 
 });

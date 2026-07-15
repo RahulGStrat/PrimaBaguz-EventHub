@@ -69,7 +69,7 @@ button {
 }
 
 .only-mobile-tablet {
-  display: none;
+  display: none !important;
 }
 
 @include mobile-tablet {
@@ -79,7 +79,7 @@ button {
   }
 
   .hide-mobile-tablet {
-    display: none;
+    display: none !important;
   }
 
   .only-mobile-tablet {
