@@ -1,16 +1,20 @@
 .pre-header {
   display: flex;
   align-items: center;
+
   &__logo {
     display: flex;
     align-items: center;
+
     a {
       font-size: 0;
     }
+
     img {
       height: 36px;
     }
   }
+
   &__main {
     padding: 10px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -22,24 +26,29 @@
     z-index: 11;
     width: 100%;
   }
+
   &__nav {
     list-style: none;
     display: flex;
     gap: 20px;
     transition: transform 0.3s ease;
     margin-left: 10%;
+
     &-item {
       position: relative;
       display: flex;
       align-items: center;
-      &-btn{
+
+      &-btn {
         margin-top: auto;
-        .pre-btn{
+
+        .pre-btn {
           margin: 0px 0px 45px !important;
           width: 100%;
         }
       }
     }
+
     &-link {
       color: $color-white;
       font-size: 14px;
@@ -49,6 +58,8 @@
       // display: block;
       position: relative;
       transition: all ease 0.5s;
+      font-weight: 500;
+
       &::after {
         content: "";
         position: absolute;
@@ -60,20 +71,25 @@
         background-color: $color-red;
         transition: all ease 0.5s;
       }
+
       &:hover {
         color: $color-red;
+
         &:after {
           width: 100%;
         }
       }
+
       &.active {
         color: $color-red;
-        font-weight: $font-bold;
+        font-weight: 500;
+
         &:after {
           width: 100%;
         }
       }
-      &-scroll{
+
+      &-scroll {
         height: 88px;
         opacity: 0;
         visibility: hidden;
@@ -81,6 +97,7 @@
       }
     }
   }
+
   .pre-btn {
     margin-left: 10%;
     padding: 8px 28px;
@@ -89,15 +106,18 @@
     border-radius: 10px;
     font-weight: $font-bold;
     transition: all ease 0.5s;
+
     &:hover {
       text-decoration: none;
-      background-color: #bc1a1f;
+      // background-color: #bc1a1f;
     }
+
     span:after {
-      display: none;
+      height: 0.8px;
     }
   }
 }
+
 /* Hamburger */
 .hamburger {
   position: relative;
@@ -109,6 +129,7 @@
   z-index: 15;
   display: none;
 }
+
 .hamburger span {
   position: absolute;
   left: 0;
@@ -136,6 +157,7 @@
     background-color: $color-red;
   }
 }
+
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg);
   top: 10px;
@@ -168,28 +190,34 @@
   display: block;
   opacity: 1;
 }
+
 @include tablet-pro {
   .pre-header {
     justify-content: space-between;
     gap: 0px;
+
     &__nav {
       gap: 16px;
       margin-left: 0px;
     }
+
     &__logo img {
       height: 20px;
     }
   }
 }
+
 @include tablet {
   .pre-header {
     justify-content: space-between;
     gap: 15px;
     flex-direction: column;
+
     &__nav {
       gap: 12px;
       margin-left: 0px;
     }
+
     &__logo img {
       height: 45px;
     }
@@ -199,10 +227,12 @@
     }
   }
 }
+
 @include mobile {
   .hamburger {
     display: flex;
   }
+
   .pre-header {
     justify-content: space-between;
 
@@ -211,12 +241,14 @@
     }
 
     &__logo {
+
       // width: 200px;
       img {
         // width: 100%;
         height: 28px;
       }
     }
+
     &__nav {
       position: fixed;
       top: 0;
@@ -233,38 +265,48 @@
       scrollbar-width: thin;
       scrollbar-color: #555 #222;
       margin-left: 0px;
+
       &.show {
         transform: translateX(0);
       }
+
       &-item {
         display: unset;
+
         &-arrowdwn svg {
           path {
             stroke: #fff;
           }
         }
-        &.open > .pre-navbar__nav-submenu {
+
+        &.open>.pre-navbar__nav-submenu {
           // max-height: 500px; /* enough to show all */
           opacity: 1;
           background: transparent;
           padding-top: 10px;
         }
-        &.open > .pre-navbar__nav-link {
+
+        &.open>.pre-navbar__nav-link {
           color: #fff;
         }
       }
+
       &-link {
         color: $color-grey;
         font-weight: $font-bold;
+
         &:hover {
           color: $color-red;
         }
       }
+
       &-submenu {
         position: static;
         padding: 0px 0px 0px 10px;
+
         &-item {
           position: relative;
+
           &::before {
             width: 4px;
             height: 4px;

@@ -1,10 +1,11 @@
-.pre-banner{
+.pre-banner {
 
-    &__main{
+    &__main {
         height: 600px;
         position: relative;
     }
-    &__bg{
+
+    &__bg {
         position: absolute;
         left: 0;
         width: 100%;
@@ -14,14 +15,15 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
-    .pre-btn__wrap{
+
+    .pre-btn__wrap {
         position: absolute;
         bottom: 10%;
         left: 28%;
         display: flex;
         gap: 15px;
 
-        .pre-btn{
+        .pre-btn {
             text-decoration: none;
             transition: all ease 0.5s;
             padding: 15px 28px;
@@ -29,22 +31,33 @@
             text-transform: uppercase;
             border-radius: 10px;
             font-weight: $font-bold;
-            span{
-                &::after{
-                    display: none;
+
+            span {
+                &::after {
+                    height: 0.8px;
                 }
             }
-            &:hover{
-                background-color: #BC1A1F;
-            }
-            &--inv{
+
+            &--inv {
                 background-color: transparent;
                 border: 2px solid $color-white;
 
-                &:hover{
-                    border-color: #BC1A1F;
-                    background-color: transparent;
-                    color: $color-red;
+                &:hover {
+                    // border-color: #BC1A1F;
+                    // background-color: #FAF8FF;
+                    color: #fff;
+                }
+
+                // span {
+                //     &::after {
+                //         display: none;
+                //     }
+                // }
+
+                span {
+                    &::after {
+                        height: 0.8px;
+                    }
                 }
             }
         }
