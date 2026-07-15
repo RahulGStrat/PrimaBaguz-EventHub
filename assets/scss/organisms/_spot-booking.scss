@@ -21,16 +21,16 @@
         text-align: center;
 
         h3 {
-            font-size: 32px;
-            font-weight: 600;
+            font-size: 38px;
+            font-weight: $font-bold;
             color: #FAF8FF;
             margin-bottom: 20px;
             text-transform: uppercase;
         }
 
         h4 {
-            font-size: 32px;
-            font-weight: 400;
+            font-size: 38px;
+            font-weight: $font-regular;
             color: #FAF8FF;
             margin-bottom: 20px;
             text-transform: uppercase;
