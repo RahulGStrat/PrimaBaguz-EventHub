@@ -21,6 +21,11 @@
       padding: 26% 0;
    }
 
+   //  75% below
+   @media (min-width: 2199px) {
+      padding: 5% 0;
+   }
+
    &__heading {
       color: #ffffff;
       font-size: 42px;
