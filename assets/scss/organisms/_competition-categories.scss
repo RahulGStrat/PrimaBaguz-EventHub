@@ -1,29 +1,75 @@
 .pre-competition {
    position: relative;
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: cover;
-   padding: 16% 0;
    overflow: hidden;
-
+   padding: 10% 0 13%;
    //  90%
-   @media (min-width: 1650px) and (max-width: 1890px) {
-      padding: 19% 0;
+
+   &__bg {
+      position: absolute;
+      width: 120%;
+      height: 90%;
+      top: 65px;
+      left: -10%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: rotate(5.5deg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+   }
+   &__vegImg{
+      position: absolute;
+      bottom: -350px;
+      left: -420px;
+      z-index: -1;
+      img{
+         width: 95%;
+      }
+   }
+
+   @media (min-width: 900px) and (max-width: 1200px) {
+      padding: 10% 0 13%;
+      &__bg {
+         top: 60px;
+         left: -6%;
+         width: 115%;
+      }
+   }
+   @media (min-width: 1201px) and (max-width: 1599px) {
+      // padding: 10% 0 25%;
+      &__bg {
+         top: 75px;
+      }
+   }
+   @media (min-width: 1600px) and (max-width: 1890px) {
+      // padding: 10% 0 25%;
+      &__bg {
+         top: 86px;
+      }
    }
 
    //  80%
    @media (min-width: 1899px) and (max-width: 1990px) {
-      padding: 24% 0;
+      padding: 10% 0 10%;
+      &__bg {
+         top: 95px;
+         transform: rotate(5deg);
+      }
    }
 
    //  75%
    @media (min-width: 1999px) and (max-width: 2100px) {
-      padding: 26% 0;
+   //  padding: 26% 0;
    }
 
    //  75% below
    @media (min-width: 2199px) {
-      padding: 5% 0;
+      padding: 6% 0;
+      &__bg {
+         top: 70px;
+         transform: rotate(2deg);
+      }
    }
 
    &__heading {
