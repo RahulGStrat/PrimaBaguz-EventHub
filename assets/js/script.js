@@ -68,3 +68,114 @@ $(function () {
     });
 
 });
+
+// ================================ NOTIFY MODAL ================================
+document.addEventListener('DOMContentLoaded', () => {
+  const notifyBtn = document.getElementById('notify-btn');
+  const notifyModal = document.getElementById('notifyModal');
+  
+  if (!notifyBtn || !notifyModal) return;
+
+  const notifyModalClose = document.getElementById('notifyModalClose');
+  const notifyModalBackdrop = document.getElementById('notifyModalBackdrop');
+  const notifyModalForm = document.getElementById('notifyModalForm');
+  const notifyModalEmail = document.getElementById('notifyModalEmail');
+  const notifyModalError = document.getElementById('notifyModalError');
+
+  // Focusable elements inside the modal for focus trapping
+  const focusableElements = notifyModal.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  );
+  const firstFocusableElement = focusableElements[0];
+  const lastFocusableElement = focusableElements[focusableElements.length - 1];
+  let previousActiveElement = null;
+
+  const openModal = (e) => {
+    e.preventDefault();
+    previousActiveElement = document.activeElement;
+    notifyModal.classList.add('show');
+    document.body.classList.add('modal-open');
+    notifyModalEmail.focus();
+    notifyModalEmail.value = '';
+    notifyModalEmail.classList.remove('invalid');
+    notifyModalError.textContent = '';
+  };
+
+  const closeModal = () => {
+    notifyModal.classList.remove('show');
+    document.body.classList.remove('modal-open');
+    if (previousActiveElement) {
+      previousActiveElement.focus();
+    }
+  };
+
+  notifyBtn.addEventListener('click', openModal);
+  notifyModalClose.addEventListener('click', closeModal);
+  notifyModalBackdrop.addEventListener('click', closeModal);
+
+  // Esc key & focus trap
+  notifyModal.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+    
+    if (e.key === 'Tab') {
+      if (e.shiftKey) { // Shift + Tab
+        if (document.activeElement === firstFocusableElement) {
+          lastFocusableElement.focus();
+          e.preventDefault();
+        }
+      } else { // Tab
+        if (document.activeElement === lastFocusableElement) {
+          firstFocusableElement.focus();
+          e.preventDefault();
+        }
+      }
+    }
+  });
+
+  // Validation
+  const isValidEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  // Submit Handler
+  notifyModalForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = notifyModalEmail.value.trim();
+    
+    if (!email) {
+      notifyModalEmail.classList.add('invalid');
+      notifyModalError.textContent = 'Email is required';
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      notifyModalEmail.classList.add('invalid');
+      notifyModalError.textContent = 'Please enter a valid email address';
+      return;
+    }
+
+    notifyModalEmail.classList.remove('invalid');
+    notifyModalError.textContent = '';
+
+    // Handle valid submission
+    handleSubmit(email);
+  });
+
+  // Clear validation on input
+  notifyModalEmail.addEventListener('input', () => {
+    if (notifyModalEmail.classList.contains('invalid')) {
+      notifyModalEmail.classList.remove('invalid');
+      notifyModalError.textContent = '';
+    }
+  });
+
+  const handleSubmit = (email) => {
+    console.log(email);
+    // Optionally close the modal after submission
+    // closeModal();
+  };
+});
+// ================================ NOTIFY MODAL END ================================

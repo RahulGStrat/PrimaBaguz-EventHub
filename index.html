@@ -486,7 +486,7 @@
                 </li>
               </ul>
 
-              <a href="#" class="pre-sys__button pre-sys__button--dark">
+              <a href="#" class="pre-sys__button pre-sys__button--dark" id="notify-btn">
                 GET NOTIFIED
               </a>
 
@@ -704,6 +704,37 @@
       </div>
     </section>
     <!-- Footer end -->
+
+    <!-- Notify Modal -->
+    <div id="notifyModal" class="pre-modal" role="dialog" aria-modal="true" aria-labelledby="notifyModalTitle">
+      <div class="pre-modal__backdrop" id="notifyModalBackdrop"></div>
+      <div class="pre-modal__container">
+        <button class="pre-modal__close" id="notifyModalClose" aria-label="Close modal">
+          <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.414286" y="0.414286" width="57.1714" height="57.1714" rx="28.5857" fill="white" />
+            <rect x="0.414286" y="0.414286" width="57.1714" height="57.1714" rx="28.5857" stroke="black"
+              stroke-width="0.828571" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M28.9999 33.2985L17.9458 44.3526L13.647 40.0538L24.7011 28.9997L13.647 17.9456L17.9458 13.6467L28.9999 24.7008L40.054 13.6467L44.3529 17.9456L33.2987 28.9997L44.3529 40.0538L40.054 44.3526L28.9999 33.2985Z"
+              fill="#434656" />
+          </svg>
+        </button>
+        <div class="pre-modal__content">
+          <h2 id="notifyModalTitle" class="pre-modal__title">NOTIFY <span class="pre-modal__title--highlight">ME</span>
+          </h2>
+          <form id="notifyModalForm" class="pre-modal__form" novalidate>
+            <div class="pre-modal__input-group">
+              <input type="email" id="notifyModalEmail" class="pre-modal__input" placeholder="Type your email here"
+                required>
+              <span id="notifyModalError" class="pre-modal__error" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="pre-btn pre-modal__submit">
+              <span>SUBMIT</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- scripts -->
     <script src="assets/js/jquery.slim.min.js"></script>
