@@ -484,7 +484,7 @@
                 </li>
               </ul>
 
-              <a href="#" class="pre-sys__button pre-sys__button--dark">
+              <a href="#" class="pre-sys__button pre-sys__button--dark" id="notify-btn">
                 GET NOTIFIED
               </a>
 
@@ -702,6 +702,31 @@
       </div>
     </section>
     <!-- Footer end -->
+
+    <!-- Notify Modal -->
+    <div id="notifyModal" class="pre-modal" role="dialog" aria-modal="true" aria-labelledby="notifyModalTitle">
+      <div class="pre-modal__backdrop" id="notifyModalBackdrop"></div>
+      <div class="pre-modal__container">
+        <button class="pre-modal__close" id="notifyModalClose" aria-label="Close modal">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="19.5" fill="white" stroke="#E6E6E6"/>
+            <path d="M26 14L14 26M14 14L26 26" stroke="#3A3B41" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="pre-modal__content">
+          <h2 id="notifyModalTitle" class="pre-modal__title">NOTIFY <span class="pre-modal__title--highlight">ME</span></h2>
+          <form id="notifyModalForm" class="pre-modal__form" novalidate>
+            <div class="pre-modal__input-group">
+              <input type="email" id="notifyModalEmail" class="pre-modal__input" placeholder="Type your email here" required>
+              <span id="notifyModalError" class="pre-modal__error" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="pre-modal__submit">
+              SUBMIT
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- scripts -->
     <script src="assets/js/jquery.slim.min.js"></script>
