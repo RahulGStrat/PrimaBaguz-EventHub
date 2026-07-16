@@ -708,20 +708,26 @@
       <div class="pre-modal__backdrop" id="notifyModalBackdrop"></div>
       <div class="pre-modal__container">
         <button class="pre-modal__close" id="notifyModalClose" aria-label="Close modal">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="20" cy="20" r="19.5" fill="white" stroke="#E6E6E6"/>
-            <path d="M26 14L14 26M14 14L26 26" stroke="#3A3B41" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.414286" y="0.414286" width="57.1714" height="57.1714" rx="28.5857" fill="white" />
+            <rect x="0.414286" y="0.414286" width="57.1714" height="57.1714" rx="28.5857" stroke="black"
+              stroke-width="0.828571" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M28.9999 33.2985L17.9458 44.3526L13.647 40.0538L24.7011 28.9997L13.647 17.9456L17.9458 13.6467L28.9999 24.7008L40.054 13.6467L44.3529 17.9456L33.2987 28.9997L44.3529 40.0538L40.054 44.3526L28.9999 33.2985Z"
+              fill="#434656" />
           </svg>
         </button>
         <div class="pre-modal__content">
-          <h2 id="notifyModalTitle" class="pre-modal__title">NOTIFY <span class="pre-modal__title--highlight">ME</span></h2>
+          <h2 id="notifyModalTitle" class="pre-modal__title">NOTIFY <span class="pre-modal__title--highlight">ME</span>
+          </h2>
           <form id="notifyModalForm" class="pre-modal__form" novalidate>
             <div class="pre-modal__input-group">
-              <input type="email" id="notifyModalEmail" class="pre-modal__input" placeholder="Type your email here" required>
+              <input type="email" id="notifyModalEmail" class="pre-modal__input" placeholder="Type your email here"
+                required>
               <span id="notifyModalError" class="pre-modal__error" aria-live="polite"></span>
             </div>
-            <button type="submit" class="pre-modal__submit">
-              SUBMIT
+            <button type="submit" class="pre-btn pre-modal__submit">
+              <span>SUBMIT</span>
             </button>
           </form>
         </div>
