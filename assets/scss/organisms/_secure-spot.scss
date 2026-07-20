@@ -201,3 +201,141 @@
         }
     }
 }
+
+// CARDS NEW==================
+
+.pre-sys__tile {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+
+  &-cards {
+    background-color: #ffffff;
+    border: 2px solid #737688;
+    border-radius: 28px;
+    flex: 1;
+    min-width: 320px;
+    max-width: 400px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+
+    &--active{
+        border: 2px solid $color-red;
+    }
+    .pre-btn--inc{
+        background-color: #686868;
+        span:after{
+            display: none;
+        }
+    }
+  }
+
+  &-badge {
+    position: absolute;
+    top: -16px;
+    right: 40px;
+    background-color: $color-red;
+    color: #ffffff;
+    font-weight: $font-bold;
+    font-size: 10px;
+    font-family: "JetBrains Mono", monospace;
+    padding: 5px 22px;
+    border-radius: 100px;
+    text-transform: uppercase;
+  }
+
+  &-subtitle {
+    color: $color-red;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: $font-bold;
+    font-size: 12px;
+    margin-bottom:12px;
+    text-transform: uppercase;
+    min-height: 20px;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  &-toggle-container {
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid #434656;
+    border-radius: 16px;
+    padding: 5px;
+    margin-bottom: 18px;
+    position: relative;
+    height: 60px;
+  }
+
+  &-switch-slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(50% - 2px);
+    height: calc(100% - 4px);
+    background-color: #1C2B5F;
+    border-radius: 12px;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+  }
+
+  &-toggle-option {
+    flex: 1;
+    text-align: center;
+    // line-height: 60px;
+    font-size: 30px;
+    font-weight: $font-bold;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.25s ease;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--active {
+      color: #ffffff;
+    }
+
+    &--inactive {
+      color: #737688;
+      font-weight: $font-regular;
+    }
+  }
+
+  &-details-list {
+    list-style: none;
+    margin-bottom: 10px;
+    min-height: 76px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #B0B0B2;
+
+    li {
+        font-family: "JetBrains Mono", monospace;
+        color: #737688;
+        font-size: 15px;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+    }
+  }
+
+  &-price-tag {
+    font-size: 44px;
+    line-height: 44px;
+    font-weight: $font-bold;
+    color: #111827;
+    margin-bottom: 25px;
+  }
+
+  &-validity-text {
+    text-align: center;
+    color: #737688;
+    font-weight: $font-bold;
+    font-size: 11px;
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+}

@@ -29,11 +29,10 @@
    }
 
    @media (min-width: 900px) and (max-width: 1200px) {
-      padding: 10% 0 13%;
+      padding: 5% 0 20%;
       &__bg {
-         top: 60px;
-         left: -6%;
-         width: 115%;
+         transform: rotate(0deg);
+         top: 0;
       }
    }
    @media (min-width: 1201px) and (max-width: 1599px) {
@@ -335,7 +334,20 @@
 
    // Responsive Styles
    @include mobile-tablet {
-      padding: 120px 0 25%;
+      // padding: 120px 0 25%;
+      padding: 5% 0 17%;
+      &__bg {
+         transform: rotate(0deg);
+         top: 0;
+         height: 96%;
+      }
+
+      &__vegImg{
+         bottom: -298px;
+         img{
+            width: 80%;
+         }
+      }
 
       &__heading {
          font-size: 32px;
@@ -362,8 +374,19 @@
    }
 
    @include mobile {
-      padding: 140px 0 55%;
-      margin-top: -60px;
+      padding: 5% 0 50%;
+      &__bg {
+         transform: rotate(0deg);
+         top: 0;
+         height: 94%;
+      }
+
+      &__vegImg{
+         bottom: -188px;
+         img{
+            width: 80%;
+         }
+      }
 
       &__heading {
          font-size: 28px;

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles -->
+    <link rel="stylesheet" href="../assets/css/aos.css">
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- styles -->
+    <title>SECURE YOUR SPOT TODAY</title>
+</head>
+
+<body>
+    <!-- body content start -->
+    <section class="pre-sys__main">
+        <div class="content-wrapper">
+            <div class="pre-sys">
+                <div class="pre-sys__heading">
+                    <div class="pre-sys__heading-left">
+                        <h2 class="pre-sys__title">
+                            SECURE YOUR <span>SPOT TODAY</span>
+                        </h2>
+                    </div>
+                    <div class="pre-sys__heading-right">
+                        <p class="pre-sys__description">
+                            Registration is open globally. Spaces are limited for technical classes M41 and M50.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- NEWS CARDS -->
+                <div class="pre-sys__tile">
+                    <!-- CARD 1 -->
+                    <div class="pre-sys__tile-cards pre-sys__tile-cards--active" id="card-1" data-aos="fade-down" data-aos-delay="100">
+                        <div class="pre-sys__tile-badge">Best Value</div>
+                        <div class="pre-sys__tile-subtitle">Early Bird</div>
+
+                        <div class="pre-sys__tile-toggle-container">
+                            <div class="pre-sys__tile-switch-slider"></div>
+                            <div class="pre-sys__tile-toggle-option pre-sys__tile-toggle-option--active"
+                                data-price="RM 550" data-details="Class M41|Gourmessa Charcuterie|Signature Challenge"
+                                onclick="switchTab('card-1', 'm41', this)">M41</div>
+
+                            <div class="pre-sys__tile-toggle-option pre-sys__tile-toggle-option--inactive"
+                                data-price="RM 300" data-details="Class M50|Merrychef Primabaguz|Sandwich Toast Master"
+                                onclick="switchTab('card-1', 'm50', this)">M50</div>
+                        </div>
+                        <ul class="pre-sys__tile-details-list">
+                            <li>Class M41</li>
+                            <li>Gourmessa Charcuterie</li>
+                            <li>Signature Challenge</li>
+                        </ul>
+                        <div class="pre-sys__tile-price-tag">RM 550</div>
+
+                        <a href="#" class="pre-btn w-100">
+                            <span>REGISTER NOW</span>
+                        </a>
+
+                        <div class="pre-sys__tile-validity-text">VALID UNTIL 15 AUG</div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="pre-sys__tile-cards" id="card-2" data-aos="fade-down" data-aos-delay="200">
+                        <div class="pre-sys__tile-subtitle">NORMAL PRICE</div>
+                        <div class="pre-sys__tile-toggle-container">
+                            <div class="pre-sys__tile-switch-slider"></div>
+                            <div class="pre-sys__tile-toggle-option pre-sys__tile-toggle-option--active"
+                                data-price="RM 650" data-details="Class M41|Gourmessa Charcuterie|Signature Challenge"
+                                onclick="switchTab('card-2', 'm41', this)">M41</div>
+
+                            <div class="pre-sys__tile-toggle-option pre-sys__tile-toggle-option--inactive"
+                                data-price="RM 300" data-details="Class M50|Merrychef Primabaguz|Sandwich Toast Master"
+                                onclick="switchTab('card-2', 'm50', this)">M50</div>
+                        </div>
+                        <ul class="pre-sys__tile-details-list">
+                            <li>Class M41</li>
+                            <li>Gourmessa Charcuterie</li>
+                            <li>Signature Challenge</li>
+                        </ul>
+                        <div class="pre-sys__tile-price-tag">RM 650</div>
+
+                        <div class="pre-btn pre-btn--inc w-100">
+                            <span>REGISTER NOW</span>
+                        </div>
+
+                        <div class="pre-sys__tile-validity-text">16 AUG - 15 SEP</div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="pre-sys__tile-cards" id="card-3" data-aos="fade-down" data-aos-delay="300">
+                        <div class="pre-sys__tile-subtitle">LAST CALL</div>
+                        <div class="pre-sys__tile-toggle-container">
+                            <div class="pre-sys__tile-switch-slider"></div>
+                            <div class="pre-sys__tile-toggle-option pre-sys__tile-toggle-option--active"
+                                data-price="RM 750" data-details="Class M41|Gourmessa Charcuterie|Signature Challenge"
+                                onclick="switchTab('card-3', 'm41', this)">M41</div>
+
+                            <div class="pre-sys__tile-toggle-option pre-sys__tile-toggle-option--inactive"
+                                data-price="RM 300" data-details="Class M50|Merrychef Primabaguz|Sandwich Toast Master"
+                                onclick="switchTab('card-3', 'm50', this)">M50</div>
+                        </div>
+                        <ul class="pre-sys__tile-details-list">
+                            <li>Class M41</li>
+                            <li>Gourmessa Charcuterie</li>
+                            <li>Signature Challenge</li>
+                        </ul>
+                        <div class="pre-sys__tile-price-tag">RM 750</div>
+
+                        <div class="pre-btn pre-btn--inc w-100">
+                            <span>REGISTER NOW</span>
+                        </div>
+
+                        <div class="pre-sys__tile-validity-text">16 SEP - 20 SEP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- body content end -->
+
+    <!-- scripts -->
+    <script src="../assets/js/jquery.slim.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <!-- scripts -->
+</body>
+
+</html>
