@@ -137,7 +137,8 @@
         }
         &-popper{
             position: absolute;
-            top: -74px;
+            width: calc(100% + 50px);
+            transform: translate(-24px, -89px);
         }
     }
     &__footer{
