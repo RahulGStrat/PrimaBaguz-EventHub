@@ -20,22 +20,22 @@
   &__icon1 {
     position: absolute;
     top: 0;
-    left: 18%;
+    left: 12%;
   }
   &__icon2 {
     position: absolute;
-    top: 5%;
+    top: -2%;
     left: 75%;
   }
   &__icon3 {
     position: absolute;
-    bottom: 0;
+    bottom: -3%;
     left: 15%;
   }
   &__icon4 {
     position: absolute;
-    bottom: -8%;
-    left: 80%;
+    bottom: -4%;
+    left: 78%;
   }
   .accordion {
     background: #fdfdff;
@@ -127,19 +127,37 @@
     }
   }
 }
+@media (min-width: 1600px) {
+
+   .pre-faq {
+        &__icon1 {
+            left: 15%;
+        }
+        &__icon2 {
+          left: 70%;
+        }
+        &__icon3 {
+            left: 20%;
+        }
+        &__icon4 {
+            left: 71%;
+        }
+    }
+
+}
 @media (min-width: 1200px) and (max-width: 1300px) {
     .pre-faq {
         &__icon1 {
-            left: 14%;
+            left: 8%;
         }
         &__icon2 {
-            left: 78%;
+            left: 75%;
         }
         &__icon3 {
             left: 10%;
         }
         &__icon4 {
-            left: 84%;
+            left: 78%;
         }
     }
 }
@@ -151,16 +169,16 @@
             font-size: 36px;
         }
         &__icon1 {
-            left: 10%;
+            left: 3%;
         }
         &__icon2 {
-            left: 80%;
+            left: 75%;
         }
         &__icon3 {
-            left: 10%;
+            left: 8%;
         }
         &__icon4 {
-            left: 84%;
+            left: 77%;
         }
     }
 }
@@ -174,16 +192,27 @@
 
         }
         &__icon1 {
-            left: 0%;
+            left: 1%;
+            top: 4%;
+            img{
+              width: 70%;
+            }
         }
         &__icon2 {
-            left: 84%;
+            left: 78%;
         }
         &__icon3 {
-            left: 5%;
+            left: 3%;
+            img{
+              width: 90%;
+            }
         }
         &__icon4 {
             left: 80%;
+            bottom: -2%;
+            img{
+              width: 90%;
+            }
         }
     }
 }
@@ -193,33 +222,37 @@
          margin-bottom: 30px;
         &__head {
             font-size: 28px;
+            margin-bottom: 12px;
         }
         .accordion {
             width: 90%;
         }
         &__icon1 {
             left: -2%;
+            top: 18px;
             img {
-                width: 60%;
+                width: 40%;
             }
         }
         &__icon2 {
+            top:30px;
             left: 80%;
             img {
                 width: 80%;
             }
         }
         &__icon3 {
-            left: 0%;
+            left: 3%;
+            bottom: -10px;
             img {
-                width: 80%;
+                width: 60%;
             }
         }
         &__icon4 {
-            left: 75%;
-            bottom: 0;
+            left: 65%;
+            bottom: -5px;
             img {
-                width: 80%;
+                width: 90%;
             }
         }
     }
