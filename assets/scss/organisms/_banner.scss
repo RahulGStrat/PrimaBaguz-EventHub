@@ -19,7 +19,7 @@
       }
    }
    &__main {
-      height: 600px;
+      height: 640px;
       position: relative;
 
       .content-wrapper{
@@ -106,15 +106,17 @@
 
          &--inv {
             background-color: transparent;
-            border: 2px solid $color-white;
+            border: 2px solid $color-blue;
+            color: $color-blue;
 
             &:hover {
-               color: $color-white;
+               color: $color-blue;
             }
 
             span {
                &::after {
                   height: 0.8px;
+                  background-color: $color-blue;
                }
             }
          }
@@ -163,7 +165,7 @@
 @include mobile {
    .pre-banner {
       align-items: end;
-      padding-bottom: 25px;
+      padding-bottom: 35px;
       &__body{
          font-size: 0;
          width: 100%;
@@ -173,7 +175,18 @@
       .pre-btn__wrap {
          flex-direction: column;
          .pre-btn{
-            width: 100%;
+               width: 100%;
+               &--inv {
+                  background-color: transparent;
+                  border: 2px solid $color-white;
+                  color: $color-white;
+               &:hover {
+                  color: $color-white;
+                   span::after {
+                     background-color: #fff;
+                  }
+               }
+            }
          }
       }
       &__main {

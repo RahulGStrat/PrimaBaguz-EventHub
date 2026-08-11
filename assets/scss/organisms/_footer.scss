@@ -4,8 +4,9 @@
     gap: 40px;
     align-items: start;
     &__main {
-        background-color: #000;
+        background-color: $color-white;
         padding: 60px 0 0;
+        border-top: 3px solid $color-blue;
     }
     &__left {
         display: flex;
@@ -18,7 +19,7 @@
     }
     &__title {
         font-size: 42px;
-        color: #FAF8FF;
+        color: $color-blue;
         font-weight: $font-semi-bold;
         text-transform: uppercase;
         margin-bottom: 30px;
@@ -29,12 +30,12 @@
         align-items:center;
         margin-bottom: 24px;
         font-size: 14px;
-        color: #ccc;
+        color: $color-blue;
         line-height: 20px;
         gap: 10px;
 
         a {
-            color: #ccc;
+            color: $color-blue;
             text-decoration: none;
             transition:all ease 0.5s;
 
@@ -112,12 +113,15 @@
     }
     &__bottom {
         border-top: 1px solid rgba(250, 248, 255, 0.1);
-        padding-top: 20px;
-        padding-bottom: 30px;
-        margin-top: 40px;
+        padding-top: 15px;
+        padding-bottom: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        &-main{
+            margin-top: 40px;
+            background-color: $color-blue;
+        }
         p{
             font-size: 11px;
             color: #fff;
@@ -131,7 +135,7 @@
     }
 
     &__utility-btn {
-        background-color: #111;
+        background-color:rgba(250, 248, 255, 0.05);
         border: none;
         border-radius: 50%;
         width: 36px;
@@ -140,10 +144,10 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        transition: background-color 0.2s;
+        transition: all ease 0.5s;
 
         &:hover {
-            background-color: #222;
+            transform: translate(0px, -2px);
         }
 
         svg {
