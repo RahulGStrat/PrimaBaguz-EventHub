@@ -106,17 +106,17 @@
 
          &--inv {
             background-color: transparent;
-            border: 2px solid $color-blue;
-            color: $color-blue;
+            border: 2px solid $color-white;
+            color: $color-white;
 
             &:hover {
-               color: $color-blue;
+               color: $color-white;
             }
 
             span {
                &::after {
                   height: 0.8px;
-                  background-color: $color-blue;
+                  background-color: $color-white;
                }
             }
          }
