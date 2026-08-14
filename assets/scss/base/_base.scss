@@ -83,7 +83,7 @@ button {
   }
 
   .only-mobile-tablet {
-    display: block;
+    display: block !important;
   }
 }
 
@@ -98,6 +98,6 @@ button {
   }
 
   .only-mobile {
-    display: block;
+    display: block !important;
   }
 }
